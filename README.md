@@ -6,7 +6,7 @@ Shared issue and pull request templates for ARURA-AB repositories.
 
 | File | Purpose |
 | --- | --- |
-| [Task form](.github/ISSUE_TEMPLATE/task.yml) | One Markdown text area for summary, scope, acceptance criteria, test plan, and risk assessment, followed by work type and risk level dropdowns and component checkboxes. |
+| [Task form](.github/ISSUE_TEMPLATE/task.yml) | One Markdown text area for summary, scope, acceptance criteria, test plan, and risk assessment. |
 | [Bug report form](.github/ISSUE_TEMPLATE/bug.yml) | Collects the problem, reproduction steps, and expected behavior. |
 | [Issue configuration](.github/ISSUE_TEMPLATE/config.yml) | Disables blank issues in the issue chooser. |
 | [Pull request template](.github/pull_request_template.md) | Prompts for a summary, related issue, changes, validation, risks, deployment details, and review checks. |
@@ -21,4 +21,4 @@ See GitHub's [default community health file documentation](https://docs.github.c
 
 ## Updating templates
 
-Edit issue forms in `.github/ISSUE_TEMPLATE/` and the pull request template in `.github/pull_request_template.md`. Keep task classification controls outside the task's Markdown text area. Changes on the default branch apply to newly created issues and pull requests that use these templates.
+Edit issue forms in `.github/ISSUE_TEMPLATE/` and the pull request template in `.github/pull_request_template.md`. Manage classification through GitHub’s issue sidebar instead of adding fields to the task form. Labels and issue types use repository and organization settings; custom issue fields such as risk level must be configured at the organization level. Issue templates cannot define or set custom sidebar fields. See [GitHub’s issue field documentation](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/adding-and-managing-issue-fields). Changes on the default branch apply to newly created issues and pull requests that use these templates.
