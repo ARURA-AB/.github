@@ -4,35 +4,42 @@ labels:
   - task
 body:
   - type: textarea
-    id: description
+    id: summary
     attributes:
-      label: Task description
-      description: Describe the task using the headings below.
-      value: |
-        ## Summary
+      label: Summary
+      description: What should be achieved, and why is it needed?
+    validations:
+      required: true
 
-        <!-- What should be achieved, and why is it needed? -->
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List what is included and explicitly out of scope.
+    validations:
+      required: true
 
-        ## Scope
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: List observable conditions that must be true for the task to be complete.
+      placeholder: "- [ ] Describe a verifiable outcome."
+    validations:
+      required: true
 
-        <!-- List what is included and explicitly out of scope. -->
+  - type: textarea
+    id: test-plan
+    attributes:
+      label: Test plan
+      description: List automated checks, manual checks, and representative scenarios.
+    validations:
+      required: true
 
-        -
-
-        ## Acceptance criteria
-
-        <!-- Replace these placeholders with observable conditions that must be true. -->
-
-        - [ ]
-
-        ## Test plan
-
-        <!-- List automated checks, manual checks, and representative scenarios. -->
-
-        -
-
-        ## Risk assessment
-
-        <!-- What could go wrong? Consider technical, compatibility, data, privacy, authorization, and security risks, plus mitigations. State when no material risk is expected. -->
+  - type: textarea
+    id: risk-assessment
+    attributes:
+      label: Risk assessment
+      description: What could go wrong? Consider technical, compatibility, data, privacy, authorization, and security risks, plus mitigations. State when no material risk is expected.
     validations:
       required: true

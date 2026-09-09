@@ -6,7 +6,7 @@ Shared issue and pull request templates for ARURA-AB repositories.
 
 | File | Purpose |
 | --- | --- |
-| [Task form](.github/ISSUE_TEMPLATE/task.yml) | One Markdown text area for summary, scope, acceptance criteria, test plan, and risk assessment. |
+| [Task form](.github/ISSUE_TEMPLATE/task.yml) | Separate required fields for summary, scope, acceptance criteria, test plan, and risk assessment. |
 | [Bug report form](.github/ISSUE_TEMPLATE/bug.yml) | Collects the problem, reproduction steps, and expected behavior. |
 | [Issue configuration](.github/ISSUE_TEMPLATE/config.yml) | Disables blank issues in the issue chooser. |
 | [Pull request template](.github/pull_request_template.md) | Prompts for a summary, related issue, changes, validation, risks, deployment details, and review checks. |
