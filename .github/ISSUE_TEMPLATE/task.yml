@@ -1,0 +1,110 @@
+name: Task
+description: Create an implementation task
+labels:
+  - task
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What should be achieved?
+      placeholder: Describe the desired outcome.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: work-type
+    attributes:
+      label: Work type
+      description: Select the closest classification for this task.
+      options:
+        - Normal
+        - Feature
+        - Bug Fix
+        - Investigation / Performance
+        - Testing / Quality
+        - Testing / Configuration
+        - Security / Dependency Update
+        - Documentation
+      default: 0
+
+  - type: dropdown
+    id: risk-level
+    attributes:
+      label: Risk level
+      description: Provide an initial estimate; maintainers may revise it during triage.
+      options:
+        - Not yet assessed
+        - Low
+        - Medium
+        - High
+      default: 0
+
+  - type: dropdown
+    id: security-impact
+    attributes:
+      label: Security and privacy impact
+      description: Select the closest initial assessment; explain the details below.
+      options:
+        - Not yet assessed
+        - No expected change
+        - Personal or customer data involved
+        - Authorization or tenant isolation affected
+        - Security-sensitive change
+      default: 0
+
+  - type: checkboxes
+    id: components
+    attributes:
+      label: Components
+      description: Select the areas affected by this task.
+      options:
+        - label: Frontend
+        - label: Backend / API
+        - label: Field
+        - label: Document generation
+        - label: Intelligence
+        - label: Infrastructure / CI
+        - label: Documentation
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What background or constraints should be considered?
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is included, and what is explicitly out of scope?
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will completion be verified?
+      placeholder: List the observable conditions that must be true.
+    validations:
+      required: true
+
+  - type: textarea
+    id: risk-security
+    attributes:
+      label: Risk and security impact
+      description: What could go wrong? Consider technical, compatibility, data, privacy, authorization, and security risks, plus mitigations.
+      placeholder: Describe the main risks and how they will be reduced.
+    validations:
+      required: true
+
+  - type: textarea
+    id: test-plan
+    attributes:
+      label: Test plan
+      description: How should the change be validated?
+
+  - type: textarea
+    id: implementation-notes
+    attributes:
+      label: Implementation notes
+      description: Add dependencies, design decisions, or implementation suggestions.
