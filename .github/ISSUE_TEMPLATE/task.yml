@@ -40,6 +40,9 @@ body:
     validations:
       required: true
 
+    validations:
+      required: true
+
   - type: textarea
     id: risk-assessment
     attributes:
