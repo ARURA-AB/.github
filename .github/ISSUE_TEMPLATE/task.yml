@@ -40,11 +40,23 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: risk-level
+    attributes:
+      label: Risk level
+      description: Select an initial assessment. Do not assume Low or Medium without review.
+      options:
+        - Not yet assessed
+        - Low
+        - Medium
+        - High
+    validations:
+      required: true
+
   - type: textarea
     id: risk-assessment
     attributes:
       label: Risk assessment
       description: What could go wrong? Consider technical, compatibility, data, privacy, authorization, and security risks, plus mitigations. State when no material risk is expected.
-      value: "Risk level: "
     validations:
       required: true
