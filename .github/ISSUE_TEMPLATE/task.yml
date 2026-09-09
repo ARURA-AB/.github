@@ -4,11 +4,36 @@ labels:
   - task
 body:
   - type: textarea
-    id: objective
+    id: description
     attributes:
-      label: Objective
-      description: What should be achieved?
-      placeholder: Describe the desired outcome.
+      label: Task description
+      description: Describe the task using the headings below.
+      value: |
+        ## Summary
+
+        <!-- What should be achieved, and why is it needed? -->
+
+        ## Scope
+
+        <!-- List what is included and explicitly out of scope. -->
+
+        -
+
+        ## Acceptance criteria
+
+        <!-- Replace these placeholders with observable conditions that must be true. -->
+
+        - [ ]
+
+        ## Test plan
+
+        <!-- List automated checks, manual checks, and representative scenarios. -->
+
+        -
+
+        ## Risk assessment
+
+        <!-- What could go wrong? Consider technical, compatibility, data, privacy, authorization, and security risks, plus mitigations. State when no material risk is expected. -->
     validations:
       required: true
 
@@ -16,7 +41,7 @@ body:
     id: work-type
     attributes:
       label: Work type
-      description: Select the closest classification for this task.
+      description: Select one. Maintainers may revise this during triage.
       options:
         - Normal
         - Feature
@@ -26,13 +51,12 @@ body:
         - Testing / Configuration
         - Security / Dependency Update
         - Documentation
-      default: 0
 
   - type: dropdown
     id: risk-level
     attributes:
       label: Risk level
-      description: Provide an initial estimate; maintainers may revise it during triage.
+      description: Select one. Do not assume Low or Medium without review.
       options:
         - Not yet assessed
         - Low
@@ -40,24 +64,11 @@ body:
         - High
       default: 0
 
-  - type: dropdown
-    id: security-impact
-    attributes:
-      label: Security and privacy impact
-      description: Select the closest initial assessment; explain the details below.
-      options:
-        - Not yet assessed
-        - No expected change
-        - Personal or customer data involved
-        - Authorization or tenant isolation affected
-        - Security-sensitive change
-      default: 0
-
   - type: checkboxes
     id: components
     attributes:
       label: Components
-      description: Select the areas affected by this task.
+      description: Select all affected areas.
       options:
         - label: Frontend
         - label: Backend / API
@@ -66,45 +77,3 @@ body:
         - label: Intelligence
         - label: Infrastructure / CI
         - label: Documentation
-
-  - type: textarea
-    id: context
-    attributes:
-      label: Context
-      description: What background or constraints should be considered?
-
-  - type: textarea
-    id: scope
-    attributes:
-      label: Scope
-      description: What is included, and what is explicitly out of scope?
-
-  - type: textarea
-    id: acceptance
-    attributes:
-      label: Acceptance criteria
-      description: How will completion be verified?
-      placeholder: List the observable conditions that must be true.
-    validations:
-      required: true
-
-  - type: textarea
-    id: risk-security
-    attributes:
-      label: Risk and security impact
-      description: What could go wrong? Consider technical, compatibility, data, privacy, authorization, and security risks, plus mitigations.
-      placeholder: Describe the main risks and how they will be reduced.
-    validations:
-      required: true
-
-  - type: textarea
-    id: test-plan
-    attributes:
-      label: Test plan
-      description: How should the change be validated?
-
-  - type: textarea
-    id: implementation-notes
-    attributes:
-      label: Implementation notes
-      description: Add dependencies, design decisions, or implementation suggestions.
