@@ -40,13 +40,23 @@ body:
     validations:
       required: true
 
-    validations:
-      required: true
-
   - type: textarea
     id: risk-assessment
     attributes:
       label: Risk assessment
-      description: What could go wrong? Consider technical, compatibility, data, privacy, authorization, and security risks, plus mitigations. State when no material risk is expected.
+      description: Identify the adverse event, score likelihood and impact under the Risk Management Policy, calculate the overall risk, and select a handling response.
+      value: |
+        **Adverse event:** Describe the specific harmful event and affected asset or objective.
+
+        ### Likelihood
+        **[Very unlikely/Unlikely/Somewhat likely/Likely/Very likely] ([1-5]).** Explain the score and relevant controls.
+
+        ### Impact
+        **[Very low/Low/Medium/High/Very high impact] ([1-5]).** Explain the operational, financial, legal, privacy, or reputational effect.
+
+        **Overall: [Likelihood] × [Impact] = [score] ([Low/Medium/High]).**
+
+        ### Handling
+        **[Mitigate/Accept/Transfer/Avoid].** State the controls, owner, and reassessment trigger. Mitigate or Transfer requires a Risk Treatment Plan.
     validations:
       required: true
